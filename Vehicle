@@ -1,0 +1,70 @@
+import java.awt.*;
+import java.util.ArrayList;
+
+public class Vehicle {
+
+    enum Type {
+        Sedan,
+        SUV,
+        Van
+    }
+
+    // instance variables
+private String regoNumber;
+private int milage;
+private Type vehicleType;
+private ArrayList<String> garage;
+
+
+    // constructor
+public Vehicle () {
+    setRegoNumber("ABC123");
+    setMilage(0);
+    setType(Type.Sedan);
+}
+
+    //getter
+public String getRegoNumber() {return regoNumber; }
+
+public int getMilage() {return milage;}
+
+public Type getVehicleType() {return vehicleType;}
+
+    //setter
+public boolean setType (Type newType){
+    boolean retValue = false;
+    if (newType == Type.Sedan || newType == Type.SUV || newType == Type.Van) {
+        vehicleType = newType;
+        retValue = true;
+    }
+    return retValue;
+}
+
+public boolean setRegoNumber (String newRegoNumber){
+    boolean retValue = false;
+    if (newRegoNumber.length() == 6){
+        regoNumber = newRegoNumber;
+        retValue = true;
+    }
+    return retValue;
+}
+
+public boolean setMilage (int newMilage) {
+    boolean retValue = false;
+    if (newMilage <= 900) {
+        milage = newMilage;
+        retValue = true;
+    }
+    return retValue;
+}
+    //toString method
+    public String toString() {
+    String retValue = " ";
+    retValue += getVehicleType() + "\n";
+    retValue += getRegoNumber() + "\n";
+    retValue += getMilage() + "\n";
+
+    return retValue;
+    }
+
+}
