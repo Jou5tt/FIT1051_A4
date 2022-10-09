@@ -1,0 +1,58 @@
+import java.util.ArrayList;
+
+public class Trip {
+
+    // instance variables
+private String tripName; //
+private String aVehicle; //Creates a String to store the vehicle
+private String currentDate; //Creates a string to store current date
+private ArrayList<String> destinationList; //Creates an arraylist to store destinations
+
+private ArrayList <Vehicle> vehicleList;
+
+    // constructor
+public Trip (String tripName, ArrayList aVehicle) {
+    setTripName(tripName);
+    //Add a constructor that uses the addVehicle method.
+    currentDate = "01/10/2022 14:00";
+    destinationList.add("Sydney");
+
+}
+    // getter
+public String getTripName() {
+    return tripName;
+}
+
+public String getCurrentDate() {
+    return currentDate;
+}
+
+public String getaVehicle() {
+    return aVehicle;
+}
+
+    // setter
+public void setTripName (String newTripName) {
+    if(newTripName.length() >= 1 && newTripName.length() <= 20) {
+        tripName = newTripName;
+    }
+}
+
+    // other methods
+public void addVehicle(Vehicle newVehicle) {
+    if (vehicleList.con)
+}
+
+public void addDestinationByIndex(String destinationLocation, int indexPosition) {
+    if(destinationLocation.length() >= 1 && destinationList.size() <=20) {
+        destinationList.add(indexPosition, destinationLocation);
+    }
+}
+
+public void removeDestinationByIndex(int destinationLocationIndex){
+    if(destinationList.contains(destinationLocationIndex)){
+        destinationList.remove(destinationLocationIndex);
+    }
+}
+
+}
