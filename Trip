@@ -55,4 +55,5 @@ public void removeDestinationByIndex(int destinationLocationIndex){
     }
 }
 
+//This is a test to check if Github is working
 }
